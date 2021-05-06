@@ -31,6 +31,7 @@ function submitData(userName,userEmail){
     document.body.innerHTML = object["id"]
   })
   .catch(function(error) {
+    document.body.innerHTML = error.message;
     alert("Bad things! Ragnarők!");
     console.log(error.message);
   })
