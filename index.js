@@ -28,7 +28,7 @@ function submitData(userName,userEmail){
     return response.json()
   })
   .then(function(object){
-    
+    document.body.innerHTML = object["id"]
   })
   .catch(function(error){
     alert("Error!");
