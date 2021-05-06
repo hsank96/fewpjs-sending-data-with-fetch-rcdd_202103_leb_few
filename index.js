@@ -1,43 +1,44 @@
 // // Add your code here
-// fetch("http://localhost:3000/dogs", {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//     "Accept": "application/json"
-//   },
-//   body: JSON.stringify({
-//     dogName: "Byron",
-//     dogBreed: "Poodle"
-//   })
-// });
+fetch("http://localhost:3000/dogs", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  body: JSON.stringify({
+    dogName: "Byron",
+    dogBreed: "Poodle"
+  })
+});
 
-// function submitData(userName,userEmail){
-//   return fetch("http://localhost:3000/users",
-//   {
-//     method: "POST",
-//     headers: {
-//     "Content-Type": "application/json",
-//     "Accept": "application/json"
-//   },
-//   body: JSON.stringify({
-//     name: `${userName}`,
-//     email: `${userEmail}`
-//   })
-// })
-//   .then(function(response){
-//     return response.json()
-//   })
-//   .then(function(object){
-//     console.log(object)
-//   })
-//   .catch(function(error){
-//     alert("Error!");
-//     console.log(error.message)
-//   })
-// }
+function submitData(userName,userEmail){
+  return fetch("http://localhost:3000/users",
+  {
+    method: "POST",
+    headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  body: JSON.stringify({
+    name: `${userName}`,
+    email: `${userEmail}`
+  })
+})
+  .then(function(response){
+    return response.json()
+  })
+  .then(function(object){
+    console.log(object)
+  })
+  .catch(function(error){
+    alert("Error!");
+    console.log(error.message)
+  })
+}
 
-// console.log(submitData())
+console.log(submitData())
 
+///////////////////////////////////////////////////////////////////
 
 function submitData(n,e){
   return fetch("http://localhost:3000/users", {
